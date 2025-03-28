@@ -121,5 +121,11 @@ function ChangeSlide(sens) {
         numero = slide.length - 1;
     if (numero > slide.length - 1)
         numero = 0;
-    slide[numero].classList.add("active"); // Affiche la nouvelle image
+    slide[numero].classList.add("active");
 }
+
+// Défilement automatique toutes les 3 secondes (3000 ms)
+setInterval(() => {
+    ChangeSlide(1); // Défilement vers la prochaine image
+}, 3000); // Change cette valeur pour ajuster la vitesse (en millisecondes)
+
