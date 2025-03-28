@@ -1,17 +1,61 @@
 /* Styles généraux */
 body {
   font-family: Arial, sans-serif;
-  background-color: #000;
-  color: #fff;
+  background-color: #fff;
+  /* Défini le fond clair par défaut */
+  color: #000;
+  /* Texte noir pour le mode clair */
   margin: 0;
   padding: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Mode sombre */
+body.dark-mode {
+  background-color: #000000;
+  color: #fff;
 }
 
 /* Header */
-.header,
-h1 {
+header {
   text-align: center;
   padding: 20px;
+  color: black;
+}
+
+body.dark-mode header {
+  background-color: #000000;
+}
+
+header h1 {
+  font-size: 2em;
+  color: rgb(250, 182, 93);
+}
+
+/* Bouton de bascule */
+button.mode-toggle {
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #f1f1f1;
+  color: #333;
+  transition: background-color 0.3s ease;
+}
+
+button.mode-toggle:hover {
+  background-color: #ddd;
+}
+
+body.dark-mode button.mode-toggle {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode button.mode-toggle:hover {
+  background-color: #666;
 }
 
 /* Sections principales */
@@ -22,9 +66,14 @@ h1 {
 .about {
   text-align: center;
   padding: 20px;
-  font-family: cursive;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  letter-spacing: 2px;
   font-size: 18px;
   font-weight: lighter;
+}
+
+.about p {
+  text-align: center;
 }
 
 /* Contact */
@@ -33,6 +82,10 @@ h1 {
   text-align: center;
   margin: 0 auto;
   max-width: 500px;
+}
+
+.contact p {
+  text-align: center;
 }
 
 .contact a {
@@ -66,12 +119,17 @@ h1 {
   width: 45%;
   float: left;
   margin: 10px;
-  background-color: #222;
+  background-color: rgb(228, 228, 228);
   padding: 10px;
-  color: #fff;
+  color: rgb(0, 0, 0);
   border-radius: 5px;
   box-shadow: 0 4px 6px rgba(255, 255, 255, 0.425);
   font-family: 'Courier New', Courier, monospace;
+}
+
+body.dark-mode .gallery-item {
+  color: #ffffff;
+  background-color: #100f0f;
 }
 
 .gallery-item img {
@@ -110,6 +168,16 @@ h1 {
   text-align: center;
 }
 
+body.dark-mode .services li {
+  color: #ffffff;
+  background-color: #100f0f;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.425);
+}
+
+.services p {
+  text-align: center;
+}
+
 .services ul {
   list-style-type: none;
   display: flex;
@@ -121,29 +189,50 @@ h1 {
 .services li {
   margin: 10px;
   padding: 15px 35px;
-  background-color: rgba(110, 110, 110, 0.8);
-  color: #fff;
+  background-color: rgb(228, 228, 228);
+  color: #000000;
   border-radius: 25px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   font-family: 'Courier New', Courier, monospace;
 }
 
 .services li:hover {
-  background-color: #EEDD82;
+  background-color: rgb(250, 182, 93);
   color: #000;
   cursor: pointer;
-  border: 2px solid #EEDD82;
+  border: 1px solid #000000;
   transform: scale(1.05);
   transition: all 0.3s ease;
 }
 
-/* Footer */
-footer, .copyright{
-  text-align: center;
-  padding: 20px;
-  color:#EEDD82;
+body.dark-mode .services li:hover {
+  background-color: rgb(250, 182, 93);
+  color: #000;
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.425);
 }
 
+#nature,
+#evenement,
+#portraits,
+#retouche {
+  cursor: cell;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #000000;
+  background-color: rgb(250, 182, 93);
+  ;
+}
+.copyright{
+  text-align: center;
+}
+body.dark-mode footer {
+  color: #ffffff;
+  background-color: #000000;
+}
 
 /* Titres */
 h1,
@@ -161,6 +250,11 @@ h2 {
   color: rgb(250, 182, 93);
   font-family: 'Courier New', Courier, monospace;
   letter-spacing: 2px;
+}
+
+p {
+  margin: 40px;
+  text-align: justify;
 }
 
 /* Slider */
@@ -196,14 +290,6 @@ h2 {
   display: inline-block !important;
   margin: 0 1px;
   cursor: pointer;
-}
-
-#nature, 
-#evenement, 
-#portraits, 
-#retouche
-{
-  cursor:cell;
 }
 
 /* Responsive */
