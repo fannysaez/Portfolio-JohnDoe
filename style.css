@@ -52,20 +52,27 @@ button.mode-toggle {
 }
 
 button.mode-toggle {
+  border-radius: 25px;
   margin: 0; 
 }
 
 button.mode-toggle:hover {
-  background-color: #ddd;
+  background-color: #0c0c0c;
+  color:#fff;
 }
 
 body.dark-mode button.mode-toggle {
-  background-color: #444;
-  color: #fff;
+  background-color: #ffffff;
+  color: #000000;
 }
 
 body.dark-mode button.mode-toggle:hover {
-  background-color: #666;
+  background-color: #d7d4d4;
+}
+
+body.dark-mode header{
+  color: #000000;
+  background-color: rgb(250, 182, 93);
 }
 
 /* Sections principales */
@@ -240,8 +247,7 @@ footer {
   text-align: center;
 }
 body.dark-mode footer {
-  color: #ffffff;
-  background-color: #000000;
+  color: #000000;
 }
 
 /* Titres */
