@@ -380,7 +380,8 @@ p {
   }
 
   header h1 {
-    font-size: 1.8em;
+    font-size: 1.7em;
+    text-align: center;
   }
   
   .gallery-item {
@@ -404,7 +405,7 @@ p {
 
   .slider img {
     height: auto;
-    width: 100%;
+    width: 80%;
   }
 
   footer {
