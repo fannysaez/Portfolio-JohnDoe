@@ -1,3 +1,25 @@
+//Loader ! barre de progression animer
+let progress = 0;
+const progressBar = document.getElementById("progress-bar");
+const progressText = document.getElementById("progress-text");
+const loader = document.getElementById("loader");
+
+// Simule un chargement progressif
+const loadingInterval = setInterval(() => {
+    progress += 5;
+    progressBar.style.width = progress + "%";
+    progressText.innerText = progress + "%"; // Mise à jour du texte
+
+    if (progress >= 100) {
+        clearInterval(loadingInterval);
+        setTimeout(() => {
+            loader.style.opacity = "0";
+            setTimeout(() => loader.style.display = "none", 500);
+        }, 300);
+    }
+}, 100);
+
+
 // Effet de bascule (Toggle Effect) pour tous les services
 
 //Sélection de l'élément avec id='nature'
