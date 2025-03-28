@@ -84,3 +84,20 @@ modeToggleButton.addEventListener('click', () => {
         modeToggleButton.textContent = "🌙 Mode Sombre"; // Modifier le texte du bouton
     }
 });
+
+//Slide
+const slide = document.querySelectorAll(".slide");
+let numero = 0;
+
+// Afficher la première image dès le début
+slide[numero].classList.add("active");
+
+function ChangeSlide(sens) {
+    slide[numero].classList.remove("active"); // Masque l'image actuelle
+    numero = numero + sens;
+    if (numero < 0)
+        numero = slide.length - 1;
+    if (numero > slide.length - 1)
+        numero = 0;
+    slide[numero].classList.add("active"); // Affiche la nouvelle image
+}
