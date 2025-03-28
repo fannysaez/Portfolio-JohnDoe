@@ -442,7 +442,7 @@ p {
 /* Grand écran */
 @media (min-width: 1025px) {
   .gallery-item {
-    width: 30%;
+    width: 45%;
   }
 
   .services ul {
