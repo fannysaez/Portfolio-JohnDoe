@@ -198,6 +198,10 @@ h2 {
   cursor: pointer;
 }
 
+#nature, #evenements, #portraits, #retouche{
+  cursor:cell;
+}
+
 /* Responsive */
 @media (max-width: 480px) {
   body {
