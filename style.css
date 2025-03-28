@@ -262,7 +262,7 @@ h2 {
 }
 
 p {
-  margin: 40px;
+  margin: 20px;
   text-align: justify;
 }
 
@@ -380,9 +380,9 @@ p {
   }
 
   header h1 {
-    font-size: 1.2em;
+    font-size: 1.8em;
   }
-
+  
   .gallery-item {
     width: 100%;
     margin: 15px 0;
@@ -410,6 +410,10 @@ p {
   footer {
     font-size: 12px;
   }
+  #modeToggle {
+    margin-top: 10px; 
+    align-self: center; 
+  }
 }
 
 /* Tablette */
@@ -420,6 +424,7 @@ p {
 
   header {
     padding: 20px;
+    
   }
 
   .gallery-item {
