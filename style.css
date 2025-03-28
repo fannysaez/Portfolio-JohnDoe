@@ -18,7 +18,9 @@ body.dark-mode {
 
 /* Header */
 header {
-  text-align: center;
+  display: flex;
+  align-items: center; /* Aligne verticalement */
+  justify-content: space-between; /* Met un espace entre le h1 et le bouton */
   padding: 20px;
   color: black;
 }
@@ -28,6 +30,7 @@ body.dark-mode header {
 }
 
 header h1 {
+  margin: 0; 
   font-size: 2em;
   color: rgb(250, 182, 93);
 }
@@ -43,6 +46,10 @@ button.mode-toggle {
   background-color: #f1f1f1;
   color: #333;
   transition: background-color 0.3s ease;
+}
+
+button.mode-toggle {
+  margin: 0; /* Supprime la marge supplémentaire */
 }
 
 button.mode-toggle:hover {
@@ -241,7 +248,6 @@ h3 {
   color: #fff;
   font-size: 30px;
   text-decoration: underline;
-  padding: 10px;
 }
 
 h1,
@@ -265,6 +271,13 @@ p {
   display: flex;
   align-items: center;
 }
+
+.slider img {
+  padding:50px;
+  height:500px; /* Garde les proportions */
+  margin: auto; /* Centre l'image */
+}
+
 
 /* Boutons */
 #precedent,
