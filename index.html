@@ -11,6 +11,17 @@
 </head>
 
 <body>
+
+    <div id="loader">
+        <p id="loading-text">Chargement en cours...</p>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <p id="progress-text">0%</p>
+    </div>
+    
+
+
     <header>
         <h1>John Doe - Portfolio</h1>
         <button id="modeToggle" class="mode-toggle"> 🌙 Mode Sombre</button>
@@ -21,11 +32,11 @@
             <img src="/img/palmiers.webp" alt="palmiers" class="slide">
             <img src="/img/drapeau-coucher-soleil.webp" alt="drapeau-coucher-soleil" class="slide">
             <img src="/img/rocher-vagues.webp" alt="rocher-vagues" class="slide">
-            
+
             <div id="precedent" onclick="ChangeSlide(-1)">&#10094;</div>
             <div id="suivant" onclick="ChangeSlide(1)">&#10095;</div>
         </section>
-                
+
         <section class="about">
             <p>John Doe est un photographe passionné qui capture des images de la nature, des événements et des
                 personnes.</p>
@@ -75,4 +86,5 @@
 </body>
 
 <script src="script.js"></script>
+
 </html>
