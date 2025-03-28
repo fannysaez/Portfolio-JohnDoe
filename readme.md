@@ -4,7 +4,7 @@
 
 Ce script simule un chargement progressif et met à jour une barre de progression.
 
-``` bash
+```bash
 let progress = 0;
 const progressBar = document.getElementById("progress-bar");
 const progressText = document.getElementById("progress-text");
@@ -26,21 +26,21 @@ const loadingInterval = setInterval(() => {
 }, 100);
 ```
 
-* Objectifs : Ce code crée une animation de barre de    progression qui commence à 0% et augmente de 5% toutes les 100 millisecondes.
+- Objectifs : Ce code crée une animation de barre de progression qui commence à 0% et augmente de 5% toutes les 100 millisecondes.
 
 Logique :
 
-* À chaque intervalle de 100ms, la valeur de la progression augmente de 5%.
+- À chaque intervalle de 100ms, la valeur de la progression augmente de 5%.
 
-* La largeur de la barre de progression (progressBar) et le texte affiché (progressText) sont mis à jour en conséquence.
+- La largeur de la barre de progression (progressBar) et le texte affiché (progressText) sont mis à jour en conséquence.
 
-* Une fois la barre remplie (100%), le setInterval est arrêté et la loader (le conteneur de la barre de progression) devient invisible après une courte transition.
+- Une fois la barre remplie (100%), le setInterval est arrêté et la loader (le conteneur de la barre de progression) devient invisible après une courte transition.
 
 ## 2. Effet de Bascule (Toggle Effect) pour les services
 
 Ce code permet d'afficher ou de supprimer des paragraphes descriptifs lorsque l'utilisateur clique sur différents éléments (par exemple, services de photographie).
 
-``` bash
+```bash
 let existNature = false;
 let existEvenement = false;
 let existPortraits = false;
@@ -48,7 +48,7 @@ let existRetouche = false;
 
 function toggleParagraphe(element, existFlag, text, id) {
     const paragraphe = document.querySelector(`#${id}`);
-    
+
     if (paragraphe) {
         paragraphe.remove();
     } else {
@@ -57,26 +57,26 @@ function toggleParagraphe(element, existFlag, text, id) {
         newParagraphe.id = id;
         element.appendChild(newParagraphe);
     }
-    
+
     return !existFlag;
 }
 ```
 
-* Objectifs : Ce code permet de basculer l'affichage d'un paragraphe de description lorsque l'utilisateur clique sur un service (par exemple, "nature", "événement").
+- Objectifs : Ce code permet de basculer l'affichage d'un paragraphe de description lorsque l'utilisateur clique sur un service (par exemple, "nature", "événement").
 
-    Logique :
+  Logique :
 
-* Chaque service a un événement click qui appelle la fonction toggleParagraphe.
+- Chaque service a un événement click qui appelle la fonction toggleParagraphe.
 
-* La fonction toggleParagraphe vérifie si un paragraphe existe déjà. Si oui, il est supprimé ; sinon, un nouveau paragraphe est créé et ajouté à l'élément cliqué.
+- La fonction toggleParagraphe vérifie si un paragraphe existe déjà. Si oui, il est supprimé ; sinon, un nouveau paragraphe est créé et ajouté à l'élément cliqué.
 
-* Un drapeau (existFlag) permet de suivre si le paragraphe existe pour savoir s'il faut l'ajouter ou le retirer.
+- Un drapeau (existFlag) permet de suivre si le paragraphe existe pour savoir s'il faut l'ajouter ou le retirer.
 
 ## 3. Mode Sombre/Clair avec Icônes
 
 Cette section permet de basculer entre un mode sombre et un mode clair en utilisant un bouton.
 
-``` bash
+```bash
 const modeToggleButton = document.getElementById('modeToggle');
 
 // Vérifier si le mode sombre est déjà activé depuis le localStorage
@@ -100,24 +100,53 @@ modeToggleButton.addEventListener('click', () => {
 });
 ```
 
-* Objectifs : Permet à l'utilisateur de basculer entre le mode sombre et le mode clair.
+- Objectifs : Permet à l'utilisateur de basculer entre le mode sombre et le mode clair.
 
 Logique :
 
-* Au chargement de la page, le script vérifie dans le localStorage si le mode sombre a été activé précédemment. Si oui, il applique la classe dark-mode au body et modifie le texte du bouton.
+- Au chargement de la page, le script vérifie dans le localStorage si le mode sombre a été activé précédemment. Si oui, il applique la classe dark-mode au body et modifie le texte du bouton.
 
-* Lorsque l'utilisateur clique sur le bouton, le mode est basculé. Si le mode sombre est activé, il est enregistré dans le localStorage, et vice versa.
+- Lorsque l'utilisateur clique sur le bouton, le mode est basculé. Si le mode sombre est activé, il est enregistré dans le localStorage, et vice versa.
 
 ## 4. Slider (Carrousel d'images)
 
-Cette section gère un diaporama d'images en permettant de naviguer entre elles.
+Explication du script JavaScript pour le défilement automatique du slider
 
-``` bash
+Ce script permet de créer un slider d'images où les images se déplacent automatiquement à intervalles réguliers. Il utilise les méthodes JavaScript pour manipuler les classes CSS et contrôler le défilement des images. Voici une explication détaillée de chaque partie du script.
+
+### 1. Sélection des images du slider
+
+```bash
 const slide = document.querySelectorAll(".slide");
-let numero = 0;
+```
 
-// Afficher la première image dès le début
+- Objectif : Sélectionner toutes les images du slider.
+
+- Détails : document.querySelectorAll(".slide") sélectionne tous les éléments HTML ayant la classe .slide. Le résultat est un tableau de nœuds (NodeList) qui contient toutes les images que nous voulons faire défiler.
+
+### 2. Initialisation de la variable numero
+
+```bash
+let numero = 0;
+```
+
+- Objectif : Créer une variable pour suivre l'indice de l'image actuellement affichée.
+
+- Détails : numero commence à 0, ce qui signifie que l'image à l'indice 0 (la première image) est affichée au début du défilement.
+
+### 3. Affichage de la première image
+
+```bash
 slide[numero].classList.add("active");
+```
+
+- Objectif : Afficher la première image en ajoutant la classe .active.
+
+- Détails : Au départ, l'image correspondant à l'indice numero (qui est 0) reçoit la classe CSS .active, ce qui la rend visible. La classe .active peut être définie dans les styles CSS pour rendre l'image visible et afficher le slider correctement.
+
+### 4. Fonction ChangeSlide
+
+```bash
 
 function ChangeSlide(sens) {
     slide[numero].classList.remove("active"); // Masque l'image actuelle
@@ -126,14 +155,44 @@ function ChangeSlide(sens) {
         numero = slide.length - 1;
     if (numero > slide.length - 1)
         numero = 0;
-    slide[numero].classList.add("active"); // Affiche la nouvelle image
+    slide[numero].classList.add("active");
 }
 ```
 
-* Objectifs : Affiche un carrousel d'images, permettant à l'utilisateur de naviguer entre elles en avant ou en arrière.
+* Objectif : Changer l'image affichée selon la direction spécifiée.
 
-Logique :
+Détails :
 
-* Le script initialise le premier élément comme étant actif en ajoutant la classe active à la première image.
+- Masquer l'image actuelle : slide[numero].classList.remove("active") enlève la classe .active de l'image actuellement affichée, la rendant invisible.
 
-* La fonction ChangeSlide(sens) permet de changer l'image affichée en fonction de la direction (avant ou arrière). Elle met à jour l'index de l'image affichée et ajoute ou retire la classe active pour afficher ou masquer les images.
+- Mise à jour de l'indice : numero = numero + sens; modifie la valeur de numero en fonction du paramètre sens :
+
+- Si sens est 1, on passe à l'image suivante.
+
+- Si sens est -1, on revient à l'image précédente.
+
+* Bouclage à la fin ou au début :
+
+- if (numero < 0) numero = slide.length - 1; : Si numero devient inférieur à 0 (lorsque l'on essaie de revenir avant la première image), on revient à la dernière image du tableau.
+
+- if (numero > slide.length - 1) numero = 0; : Si numero dépasse le dernier indice (lorsque l'on passe après la dernière image), on revient à la première image.
+
+- Afficher la nouvelle image : slide[numero].classList.add("active"); ajoute la classe .active à la nouvelle image, la rendant visible.
+
+### 5. Défilement automatique
+
+```bash
+setInterval(() => {
+    ChangeSlide(1); // Défilement vers la prochaine image
+}, 3000); // Change cette valeur pour ajuster la vitesse (en millisecondes)
+```
+
+* Objectif : Déclencher le changement d'image automatiquement toutes les 3 secondes.
+
+Détails :
+
+- setInterval(() => { ... }, 3000); appelle la fonction passée en argument toutes les 3000 millisecondes (soit 3 secondes). Cela crée l'effet de défilement automatique.
+
+- À chaque intervalle, ChangeSlide(1) est appelé pour changer l'image dans le sens suivant (1 pour avancer).
+
+- Personnalisation : La valeur 3000 peut être modifiée pour ajuster la vitesse du défilement. Si tu veux un défilement plus rapide, tu peux réduire cette valeur (par exemple, 2000 pour 2 secondes).
