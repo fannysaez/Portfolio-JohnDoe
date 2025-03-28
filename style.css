@@ -18,9 +18,10 @@ body.dark-mode {
 
 /* Header */
 header {
+  background-color: rgb(250, 182, 93);
   display: flex;
-  align-items: center; /* Aligne verticalement */
-  justify-content: space-between; /* Met un espace entre le h1 et le bouton */
+  align-items: center; 
+  justify-content: space-between; 
   padding: 20px;
   color: black;
 }
@@ -30,9 +31,11 @@ body.dark-mode header {
 }
 
 header h1 {
+  text-decoration: none;
+  padding: 15px;
   margin: 0; 
-  font-size: 2em;
-  color: rgb(250, 182, 93);
+  font-size: 1.5em;
+  color: rgb(0, 0, 0);
 }
 
 /* Bouton de bascule */
@@ -49,7 +52,7 @@ button.mode-toggle {
 }
 
 button.mode-toggle {
-  margin: 0; /* Supprime la marge supplémentaire */
+  margin: 0; 
 }
 
 button.mode-toggle:hover {
@@ -228,7 +231,7 @@ body.dark-mode .services li:hover {
 /* Footer */
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 15px;
   color: #000000;
   background-color: rgb(250, 182, 93);
   ;
@@ -252,7 +255,7 @@ h3 {
 
 h1,
 h2 {
-  text-decoration-style: wavy;
+  text-decoration-style:dotted;
   color: rgb(250, 182, 93);
   font-family: 'Courier New', Courier, monospace;
   letter-spacing: 2px;
@@ -263,19 +266,20 @@ p {
   text-align: justify;
 }
 
+
 /* Slider */
 .slider {
   position: relative;
   width: 500px;
-  margin: auto;
+  margin: 100px auto 0 auto; 
   display: flex;
   align-items: center;
 }
 
+
 .slider img {
-  padding:50px;
-  height:500px; /* Garde les proportions */
-  margin: auto; /* Centre l'image */
+  height:500px; 
+  margin: auto; 
 }
 
 
@@ -319,7 +323,7 @@ p {
   font-size: 20px;
   font-weight: bold;
   color: rgb(250, 182, 93);
-  margin-bottom: 35px; /* Espacement entre le texte et la barre */
+  margin-bottom: 35px; 
 }
 
 /* Loader plein écran */
@@ -364,12 +368,88 @@ p {
 
 
 /* Responsive */
-@media (max-width: 480px) {
+@media (max-width: 767px) {
   body {
     font-size: 14px;
   }
 
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  header h1 {
+    font-size: 1.2em;
+  }
+
   .gallery-item {
     width: 100%;
+    margin: 15px 0;
+  }
+
+  .services ul {
+    flex-direction: column;
+  }
+
+  .contact {
+    max-width: 100%;
+    padding: 20px;
+  }
+
+  .slider {
+    width: 100%;
+    margin: 30px 0;
+  }
+
+  .slider img {
+    height: auto;
+    width: 100%;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
+
+/* Tablette */
+@media (min-width: 768px) and (max-width: 1024px) {
+  body {
+    font-size: 16px;
+  }
+
+  header {
+    padding: 20px;
+  }
+
+  .gallery-item {
+    width: 45%;
+  }
+
+  .services ul {
+    justify-content: space-between;
+  }
+
+  .slider {
+    width: 80%;
+  }
+
+  footer {
+    font-size: 14px;
+  }
+}
+
+/* Grand écran */
+@media (min-width: 1025px) {
+  .gallery-item {
+    width: 30%;
+  }
+
+  .services ul {
+    justify-content: center;
+  }
+
+  footer {
+    font-size: 16px;
   }
 }
