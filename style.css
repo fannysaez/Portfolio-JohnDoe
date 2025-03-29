@@ -422,6 +422,9 @@ p {
     margin-top: 10px; 
     align-self: center; 
   }
+  .contact{
+    color:black;
+  }
 }
 
 /* Tablette */
