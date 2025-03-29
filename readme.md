@@ -4,7 +4,7 @@
 
 Ce script simule un chargement progressif et met à jour une barre de progression.
 
-```bash
+```js
 let progress = 0;
 const progressBar = document.getElementById("progress-bar");
 const progressText = document.getElementById("progress-text");
@@ -40,7 +40,7 @@ Logique :
 
 Ce code permet d'afficher ou de supprimer des paragraphes descriptifs lorsque l'utilisateur clique sur différents éléments (par exemple, services de photographie).
 
-```bash
+```js
 let existNature = false;
 let existEvenement = false;
 let existPortraits = false;
@@ -76,7 +76,7 @@ function toggleParagraphe(element, existFlag, text, id) {
 
 Cette section permet de basculer entre un mode sombre et un mode clair en utilisant un bouton.
 
-```bash
+```js
 const modeToggleButton = document.getElementById('modeToggle');
 
 // Vérifier si le mode sombre est déjà activé depuis le localStorage
@@ -116,7 +116,7 @@ Ce script permet de créer un slider d'images où les images se déplacent autom
 
 ### 1. Sélection des images du slider
 
-```bash
+```js
 const slide = document.querySelectorAll(".slide");
 ```
 
@@ -136,7 +136,7 @@ let numero = 0;
 
 ### 3. Affichage de la première image
 
-```bash
+```js
 slide[numero].classList.add("active");
 ```
 
@@ -146,7 +146,7 @@ slide[numero].classList.add("active");
 
 ### 4. Fonction ChangeSlide
 
-```bash
+```js
 
 function ChangeSlide(sens) {
     slide[numero].classList.remove("active"); // Masque l'image actuelle
@@ -181,7 +181,7 @@ Détails :
 
 ### 5. Défilement automatique
 
-```bash
+```js
 setInterval(() => {
     ChangeSlide(1); // Défilement vers la prochaine image
 }, 3000); // Change cette valeur pour ajuster la vitesse (en millisecondes)
@@ -196,3 +196,50 @@ Détails :
 - À chaque intervalle, ChangeSlide(1) est appelé pour changer l'image dans le sens suivant (1 pour avancer).
 
 - Personnalisation : La valeur 3000 peut être modifiée pour ajuster la vitesse du défilement. Si tu veux un défilement plus rapide, tu peux réduire cette valeur (par exemple, 2000 pour 2 secondes).
+
+### Lightbox (Affichage des images en plein écran)
+
+📌 Objectif :
+* Permet d’agrandir une image en cliquant dessus et de la refermer en cliquant à l’extérieur.
+
+```js
+document.addEventListener("DOMContentLoaded", function () {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const images = document.querySelectorAll(".gallery-item img");
+
+    images.forEach(img => {
+        img.addEventListener("click", function () {
+            lightbox.classList.add("active");
+            lightboxImg.src = this.src;
+        });
+    });
+
+    // Ferme la lightbox au clic
+    lightbox.addEventListener("click", function (event) {
+        if (event.target !== lightboxImg) { // Vérifie qu'on clique en dehors de l'image
+            lightbox.classList.remove("active");
+        }
+    });
+});
+```
+
+🔹 Explication
+
+* Récupère la lightbox, l’image dans la lightbox, et toutes les images de la galerie.
+
+- Ajoute un événement click sur chaque image :
+
+* Quand on clique, la lightbox s'affiche (classList.add("active")) et l’image sélectionnée est affichée en grand.
+
+* Ferme la lightbox si on clique en dehors de l’image affichée.
+
+## 🎯 Résumé des fonctionnalités
+
+| **Fonctionnalité**            | **Explication** |
+|--------------------------------|---------------|
+| **Loader**                     | Simule un chargement avec une barre de progression animée. |
+| **Effet toggle (Services)**     | Affiche ou cache des descriptions en cliquant sur un service. |
+| **Mode sombre / clair**         | Permet de basculer entre un mode sombre et un mode clair (sauvegarde en localStorage). |
+| **Slider d'images**             | Un carrousel qui affiche automatiquement les images. |
+| **Lightbox**                    | Affiche une image en grand lorsqu'on clique dessus. |
