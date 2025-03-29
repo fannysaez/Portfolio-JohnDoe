@@ -422,9 +422,6 @@ p {
     margin-top: 10px; 
     align-self: center; 
   }
-  .contact p{
-    color:black;
-  }
 }
 
 /* Tablette */
@@ -452,9 +449,6 @@ p {
 
   footer {
     font-size: 14px;
-  }
-  .contact p{
-    color:black;
   }
 }
 
