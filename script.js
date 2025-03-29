@@ -129,6 +129,8 @@ setInterval(() => {
     ChangeSlide(1); // Défilement vers la prochaine image
 }, 3000); // Change cette valeur pour ajuster la vitesse (en millisecondes)
 
+
+//Script Lightbox (image en grand) lors du clique
 document.addEventListener("DOMContentLoaded", function () {
     const lightbox = document.getElementById("lightbox");
     const lightboxImg = document.getElementById("lightbox-img");
