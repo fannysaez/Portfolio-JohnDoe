@@ -35,7 +35,7 @@ Logique :
 - La largeur de la barre de progression (progressBar) et le texte affiché (progressText) sont mis à jour en conséquence.
 
 - Une fois la barre remplie (100%), le setInterval est arrêté et la loader (le conteneur de la barre de progression) devient invisible après une courte transition.
-
+<br><br>
 ## 2. Effet de Bascule (Toggle Effect) pour les services
 
 Ce code permet d'afficher ou de supprimer des paragraphes descriptifs lorsque l'utilisateur clique sur différents éléments (par exemple, services de photographie).
@@ -71,7 +71,7 @@ function toggleParagraphe(element, existFlag, text, id) {
 - La fonction toggleParagraphe vérifie si un paragraphe existe déjà. Si oui, il est supprimé ; sinon, un nouveau paragraphe est créé et ajouté à l'élément cliqué.
 
 - Un drapeau (existFlag) permet de suivre si le paragraphe existe pour savoir s'il faut l'ajouter ou le retirer.
-
+<br><br>
 ## 3. Mode Sombre/Clair avec Icônes
 
 Cette section permet de basculer entre un mode sombre et un mode clair en utilisant un bouton.
@@ -107,13 +107,13 @@ Logique :
 - Au chargement de la page, le script vérifie dans le localStorage si le mode sombre a été activé précédemment. Si oui, il applique la classe dark-mode au body et modifie le texte du bouton.
 
 - Lorsque l'utilisateur clique sur le bouton, le mode est basculé. Si le mode sombre est activé, il est enregistré dans le localStorage, et vice versa.
-
+<br><br>
 ## 4. Slider (Carrousel d'images)
 
 Explication du script JavaScript pour le défilement automatique du slider
 
 Ce script permet de créer un slider d'images où les images se déplacent automatiquement à intervalles réguliers. Il utilise les méthodes JavaScript pour manipuler les classes CSS et contrôler le défilement des images. Voici une explication détaillée de chaque partie du script.
-
+<br><br>
 ### 1. Sélection des images du slider
 
 ```js
@@ -123,7 +123,7 @@ const slide = document.querySelectorAll(".slide");
 📌  Objectif : Sélectionner toutes les images du slider.
 
 - Détails : document.querySelectorAll(".slide") sélectionne tous les éléments HTML ayant la classe .slide. Le résultat est un tableau de nœuds (NodeList) qui contient toutes les images que nous voulons faire défiler.
-
+<br><br>
 ### 2. Initialisation de la variable numero
 
 ```bash
@@ -133,7 +133,7 @@ let numero = 0;
 📌  Objectif : Créer une variable pour suivre l'indice de l'image actuellement affichée.
 
 - Détails : numero commence à 0, ce qui signifie que l'image à l'indice 0 (la première image) est affichée au début du défilement.
-
+<br><br>
 ### 3. Affichage de la première image
 
 ```js
@@ -143,7 +143,7 @@ slide[numero].classList.add("active");
 📌  Objectif : Afficher la première image en ajoutant la classe .active.
 
 - Détails : Au départ, l'image correspondant à l'indice numero (qui est 0) reçoit la classe CSS .active, ce qui la rend visible. La classe .active peut être définie dans les styles CSS pour rendre l'image visible et afficher le slider correctement.
-
+<br><br>
 ### 4. Fonction ChangeSlide
 
 ```js
@@ -178,7 +178,7 @@ Détails :
 - if (numero > slide.length - 1) numero = 0; : Si numero dépasse le dernier indice (lorsque l'on passe après la dernière image), on revient à la première image.
 
 - Afficher la nouvelle image : slide[numero].classList.add("active"); ajoute la classe .active à la nouvelle image, la rendant visible.
-
+<br><br>
 ### 5. Défilement automatique
 
 ```js
@@ -196,7 +196,7 @@ Détails :
 - À chaque intervalle, ChangeSlide(1) est appelé pour changer l'image dans le sens suivant (1 pour avancer).
 
 - Personnalisation : La valeur 3000 peut être modifiée pour ajuster la vitesse du défilement. Si tu veux un défilement plus rapide, tu peux réduire cette valeur (par exemple, 2000 pour 2 secondes).
-
+<br><br>
 ## 6. Lightbox (Affichage des images en plein écran)
 
 📌 Objectif :
@@ -233,6 +233,7 @@ document.addEventListener("DOMContentLoaded", function () {
 * Quand on clique, la lightbox s'affiche (classList.add("active")) et l’image sélectionnée est affichée en grand.
 
 * Ferme la lightbox si on clique en dehors de l’image affichée.
+<br><br>
 
 ## 🎯 Résumé des fonctionnalités
 
