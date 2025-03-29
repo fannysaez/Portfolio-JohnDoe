@@ -422,7 +422,7 @@ p {
     margin-top: 10px; 
     align-self: center; 
   }
-  .contact{
+  .contact p{
     color:black;
   }
 }
@@ -453,7 +453,7 @@ p {
   footer {
     font-size: 14px;
   }
-  .contact{
+  .contact p{
     color:black;
   }
 }
