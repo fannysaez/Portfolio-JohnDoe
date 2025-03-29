@@ -129,3 +129,20 @@ setInterval(() => {
     ChangeSlide(1); // Défilement vers la prochaine image
 }, 3000); // Change cette valeur pour ajuster la vitesse (en millisecondes)
 
+document.addEventListener("DOMContentLoaded", function () {
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const images = document.querySelectorAll(".gallery-item img");
+
+    images.forEach(img => {
+        img.addEventListener("click", function () {
+            lightbox.classList.add("active");
+            lightboxImg.src = this.src;
+        });
+    });
+
+    // Ferme la lightbox au clic
+    lightbox.addEventListener("click", function () {
+        lightbox.classList.remove("active");
+    });
+});
