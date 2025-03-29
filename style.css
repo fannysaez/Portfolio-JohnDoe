@@ -450,6 +450,9 @@ p {
   footer {
     font-size: 14px;
   }
+  .contact{
+    color:black;
+  }
 }
 
 /* Grand écran */
