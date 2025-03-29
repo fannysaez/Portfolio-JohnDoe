@@ -197,7 +197,7 @@ Détails :
 
 - Personnalisation : La valeur 3000 peut être modifiée pour ajuster la vitesse du défilement. Si tu veux un défilement plus rapide, tu peux réduire cette valeur (par exemple, 2000 pour 2 secondes).
 
-### 6. Lightbox (Affichage des images en plein écran)
+## 6. Lightbox (Affichage des images en plein écran)
 
 📌 Objectif :
 * Permet d’agrandir une image en cliquant dessus et de la refermer en cliquant à l’extérieur.
