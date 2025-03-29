@@ -26,7 +26,7 @@ const loadingInterval = setInterval(() => {
 }, 100);
 ```
 
-- Objectifs : Ce code crée une animation de barre de progression qui commence à 0% et augmente de 5% toutes les 100 millisecondes.
+📌  Objectifs : Ce code crée une animation de barre de progression qui commence à 0% et augmente de 5% toutes les 100 millisecondes.
 
 Logique :
 
@@ -62,7 +62,7 @@ function toggleParagraphe(element, existFlag, text, id) {
 }
 ```
 
-- Objectifs : Ce code permet de basculer l'affichage d'un paragraphe de description lorsque l'utilisateur clique sur un service (par exemple, "nature", "événement").
+📌  Objectifs : Ce code permet de basculer l'affichage d'un paragraphe de description lorsque l'utilisateur clique sur un service (par exemple, "nature", "événement").
 
   Logique :
 
@@ -100,7 +100,7 @@ modeToggleButton.addEventListener('click', () => {
 });
 ```
 
-- Objectifs : Permet à l'utilisateur de basculer entre le mode sombre et le mode clair.
+📌  Objectifs : Permet à l'utilisateur de basculer entre le mode sombre et le mode clair.
 
 Logique :
 
@@ -120,7 +120,7 @@ Ce script permet de créer un slider d'images où les images se déplacent autom
 const slide = document.querySelectorAll(".slide");
 ```
 
-- Objectif : Sélectionner toutes les images du slider.
+📌  Objectif : Sélectionner toutes les images du slider.
 
 - Détails : document.querySelectorAll(".slide") sélectionne tous les éléments HTML ayant la classe .slide. Le résultat est un tableau de nœuds (NodeList) qui contient toutes les images que nous voulons faire défiler.
 
@@ -130,7 +130,7 @@ const slide = document.querySelectorAll(".slide");
 let numero = 0;
 ```
 
-- Objectif : Créer une variable pour suivre l'indice de l'image actuellement affichée.
+📌  Objectif : Créer une variable pour suivre l'indice de l'image actuellement affichée.
 
 - Détails : numero commence à 0, ce qui signifie que l'image à l'indice 0 (la première image) est affichée au début du défilement.
 
@@ -140,7 +140,7 @@ let numero = 0;
 slide[numero].classList.add("active");
 ```
 
-- Objectif : Afficher la première image en ajoutant la classe .active.
+📌  Objectif : Afficher la première image en ajoutant la classe .active.
 
 - Détails : Au départ, l'image correspondant à l'indice numero (qui est 0) reçoit la classe CSS .active, ce qui la rend visible. La classe .active peut être définie dans les styles CSS pour rendre l'image visible et afficher le slider correctement.
 
@@ -159,7 +159,7 @@ function ChangeSlide(sens) {
 }
 ```
 
-* Objectif : Changer l'image affichée selon la direction spécifiée.
+📌  Objectif : Changer l'image affichée selon la direction spécifiée.
 
 Détails :
 
@@ -187,7 +187,7 @@ setInterval(() => {
 }, 3000); // Change cette valeur pour ajuster la vitesse (en millisecondes)
 ```
 
-* Objectif : Déclencher le changement d'image automatiquement toutes les 3 secondes.
+📌  Objectif : Déclencher le changement d'image automatiquement toutes les 3 secondes.
 
 Détails :
 
