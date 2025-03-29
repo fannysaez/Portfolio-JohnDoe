@@ -180,6 +180,30 @@ body.dark-mode .gallery-item {
   }
 }
 
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+/* Effet au clic */
+.lightbox.active {
+  display: flex;
+}
+
 /* Services */
 .services {
   padding: 25px;
