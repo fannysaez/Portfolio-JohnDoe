@@ -28,8 +28,6 @@ const loadingInterval = setInterval(() => {
 }, 300); // Intervalle de 300ms
 
 
-
-
 // Effet de bascule (Toggle Effect) pour tous les services
 
 //Sélection de l'élément avec id='nature'
