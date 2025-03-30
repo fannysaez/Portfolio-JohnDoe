@@ -2,40 +2,45 @@
 
 ## 1. Loader (Barre de progression animée)
 
-Ce script simule un chargement progressif et met à jour une barre de progression.
+Ce script simule un chargement progressif et met à jour une barre de progression, augmentant de 6% toutes les 300 millisecondes.
 
 ```js
+// Initialisation des variables
 let progress = 0;
 const progressBar = document.getElementById("progress-bar");
 const progressText = document.getElementById("progress-text");
 const loader = document.getElementById("loader");
 
-// Simule un chargement progressif
+// Simule un chargement progressif avec une augmentation de 6% toutes les 300ms
 const loadingInterval = setInterval(() => {
-    progress += 5;
+    progress += 6;
     progressBar.style.width = progress + "%";
     progressText.innerText = progress + "%"; // Mise à jour du texte
 
     if (progress >= 100) {
+        progress = 100; // Pour éviter d'aller au-delà de 100%
+        progressBar.style.width = "100%";
+        progressText.innerText = "100%"; // Affiche "100%" à la fin du chargement
         clearInterval(loadingInterval);
         setTimeout(() => {
             loader.style.opacity = "0";
             setTimeout(() => loader.style.display = "none", 500);
         }, 300);
     }
-}, 100);
+}, 300); // Intervalle de 300ms
 ```
 
-📌  Objectifs : Ce code crée une animation de barre de progression qui commence à 0% et augmente de 5% toutes les 100 millisecondes.
+📌 Objectifs : Ce code crée une animation de barre de progression qui commence à 0% et augmente de 6% toutes les 300 millisecondes.
 
 Logique :
 
-- À chaque intervalle de 100ms, la valeur de la progression augmente de 5%.
+* À chaque intervalle de 300ms, la valeur de la progression augmente de 6%.
 
-- La largeur de la barre de progression (progressBar) et le texte affiché (progressText) sont mis à jour en conséquence.
+* La largeur de la barre de progression (progressBar) et le texte affiché (progressText) sont mis à jour en conséquence.
 
-- Une fois la barre remplie (100%), le setInterval est arrêté et la loader (le conteneur de la barre de progression) devient invisible après une courte transition.
-<br><br>
+* Une fois la barre remplie à 100%, le setInterval est arrêté et le loader (le conteneur de la barre de progression) devient invisible après une courte transition de 300ms, avant d'être complètement caché après 500ms.<br><br>
+
+
 ## 2. Effet de Bascule (Toggle Effect) pour les services
 
 Ce code permet d'afficher ou de supprimer des paragraphes descriptifs lorsque l'utilisateur clique sur différents éléments (par exemple, services de photographie).
