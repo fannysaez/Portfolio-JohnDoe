@@ -35,6 +35,7 @@ const loadingInterval = setInterval(() => {
 ```
 
 📌 Objectifs : Ce code crée une animation de barre de progression qui commence à 0% et augmente de 6% toutes les 300 millisecondes.
+<br>
 Logique :
 
 * À chaque intervalle de 300ms, la valeur de la progression augmente de 6%.
