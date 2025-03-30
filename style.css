@@ -86,7 +86,7 @@ body.dark-mode header {
     width: 0;
   }
   to {
-    width: 14%; 
+    width: 20%; 
   }
 }
 
@@ -453,6 +453,13 @@ p {
     padding: 15px;
   }
 
+  .Typewriter {
+    font-size: 1.2em;
+    text-align: center;
+    max-width: 100%;
+  }
+
+
   header h1 {
     font-size: 1.7em;
     text-align: center;
@@ -498,6 +505,12 @@ p {
     font-size: 16px;
   }
 
+  .Typewriter {
+    font-size: 1.5em;
+    text-align: center;
+    max-width: 100%;
+  }
+
   header {
     padding: 20px;
 
@@ -518,6 +531,7 @@ p {
   footer {
     font-size: 14px;
   }
+  
 }
 
 /* Grand écran */
