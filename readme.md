@@ -1,4 +1,4 @@
-# Explication de ma logique tout en détaillant les 4 différents scripts
+# Explication logique tout en détaillant les 6 différents scripts
 
 ## 1. Loader (Barre de progression animée)
 
