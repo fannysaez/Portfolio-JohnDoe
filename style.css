@@ -20,8 +20,8 @@ body.dark-mode {
 header {
   background-color: rgb(250, 182, 93);
   display: flex;
-  align-items: center; 
-  justify-content: space-between; 
+  align-items: center;
+  justify-content: space-between;
   padding: 20px;
   color: black;
 }
@@ -33,7 +33,7 @@ body.dark-mode header {
 header h1 {
   text-decoration: none;
   padding: 15px;
-  margin: 0; 
+  margin: 0;
   font-size: 1.5em;
   color: rgb(0, 0, 0);
 }
@@ -53,12 +53,12 @@ button.mode-toggle {
 
 button.mode-toggle {
   border-radius: 25px;
-  margin: 0; 
+  margin: 0;
 }
 
 button.mode-toggle:hover {
   background-color: #0c0c0c;
-  color:#fff;
+  color: #fff;
 }
 
 body.dark-mode button.mode-toggle {
@@ -70,9 +70,45 @@ body.dark-mode button.mode-toggle:hover {
   background-color: #d7d4d4;
 }
 
-body.dark-mode header{
+body.dark-mode header {
   color: #000000;
   background-color: rgb(250, 182, 93);
+}
+
+/* Effet machine à écrire */
+.Typewriter {
+  color: black;
+  font-family: monospace;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0; 
+  animation: typewriter 3s steps(20) forwards;
+  animation-delay: 2s;
+}
+
+/* Animation de l'effet d'écriture */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 14%;
+  }
+}
+
+/* Curseur clignotant après l'animation */
+.Typewriter::after {
+  content: "|"; /* Curseur */
+  display: inline-block;
+  margin-left: 5px;
+  animation: blink 0.8s infinite;
+}
+
+/* Animation du clignotement */
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
 }
 
 /* Sections principales */
@@ -268,9 +304,11 @@ footer {
   background-color: rgb(250, 182, 93);
   ;
 }
-.copyright{
+
+.copyright {
   text-align: center;
 }
+
 body.dark-mode footer {
   color: #000000;
 }
@@ -286,7 +324,7 @@ h3 {
 
 h1,
 h2 {
-  text-decoration-style:dotted;
+  text-decoration-style: dotted;
   color: rgb(250, 182, 93);
   font-family: 'Courier New', Courier, monospace;
   letter-spacing: 2px;
@@ -302,15 +340,15 @@ p {
 .slider {
   position: relative;
   width: 500px;
-  margin: 100px auto 0 auto; 
+  margin: 100px auto 0 auto;
   display: flex;
   align-items: center;
 }
 
 
 .slider img {
-  height:500px; 
-  margin: auto; 
+  height: 500px;
+  margin: auto;
 }
 
 
@@ -326,6 +364,7 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
   padding: 10px;
 }
+
 /* boutons slide */
 #precedent {
   left: 10px;
@@ -354,7 +393,7 @@ p {
   font-size: 20px;
   font-weight: bold;
   color: rgb(250, 182, 93);
-  margin-bottom: 35px; 
+  margin-bottom: 35px;
 }
 
 /* Loader plein écran */
@@ -386,7 +425,8 @@ p {
 .progress-bar {
   height: 100%;
   width: 0%;
-  background: rgb(250, 182, 93);;
+  background: rgb(250, 182, 93);
+  ;
   transition: width 0.2s ease-in-out;
 }
 
@@ -394,7 +434,8 @@ p {
 #progress-text {
   font-size: 50px;
   font-weight: bold;
-  color: rgb(250, 182, 93);;
+  color: rgb(250, 182, 93);
+  ;
 }
 
 
@@ -414,7 +455,7 @@ p {
     font-size: 1.7em;
     text-align: center;
   }
-  
+
   .gallery-item {
     width: 100%;
     margin: 15px 0;
@@ -442,9 +483,10 @@ p {
   footer {
     font-size: 12px;
   }
+
   #modeToggle {
-    margin-top: 10px; 
-    align-self: center; 
+    margin-top: 10px;
+    align-self: center;
   }
 }
 
@@ -456,7 +498,7 @@ p {
 
   header {
     padding: 20px;
-    
+
   }
 
   .gallery-item {
