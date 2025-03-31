@@ -36,5 +36,5 @@ function toggleParagraphe(element, existFlag, text, id) {
 <br><br>
 
 <p align="center">
-  <a href="documentation/modeToogle.md">Précédent</a> | <a href="documentation/slider.md">Suivant</a>
+  <a href="./modeToogle.md">Précédent</a> | <a href="./slider.md">Suivant</a>
 </p>

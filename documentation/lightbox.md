@@ -38,5 +38,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 <p align="center">
-  <a href="documentation/slider.md">Précédent</a> | <a href="readme.md">Retour</a>
+  <a href="./slider.md">Précédent</a> | <a href="readme.md">Retour</a>
 </p>

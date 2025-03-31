@@ -93,5 +93,5 @@ Détails :
 <br><br>
 
 <p align="center">
-  <a href="documentation/toogleEffect.md">Précédent</a> | <a href="documentation/lightbox.md">Suivant</a>
+  <a href="./toogleEffect.md">Précédent</a> | <a href="./lightbox.md">Suivant</a>
 </p>

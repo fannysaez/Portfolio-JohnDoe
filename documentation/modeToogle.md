@@ -42,5 +42,5 @@ Ce script permet de créer un slider d'images où les images se déplacent autom
 <br><br>
 
 <p align="center">
-  <a href="documentation/loader.md">Précédent</a> | <a href="documentation/toogleEffect.md">Suivant</a>
+  <a href="./loader.md">Précédent</a> | <a href="./toogleEffect.md">Suivant</a>
 </p>
