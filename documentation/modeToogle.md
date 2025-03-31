@@ -34,12 +34,6 @@ Logique :
 
 - Lorsque l'utilisateur clique sur le bouton, le mode est basculé. Si le mode sombre est activé, il est enregistré dans le localStorage, et vice versa.
 <br><br>
-## 4. Slider (Carrousel d'images)
-
-Explication du script JavaScript pour le défilement automatique du slider
-
-Ce script permet de créer un slider d'images où les images se déplacent automatiquement à intervalles réguliers. Il utilise les méthodes JavaScript pour manipuler les classes CSS et contrôler le défilement des images. Voici une explication détaillée de chaque partie du script.
-<br><br>
 
 <p align="center">
   <a href="./loader.md">Précédent</a> | <a href="./toogleEffect.md">Suivant</a>
