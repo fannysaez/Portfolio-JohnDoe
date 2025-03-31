@@ -45,5 +45,5 @@ Logique :
 <br><br>
 
 <p align="center">
-  <a href="readme.md">Précédent</a> | <a href="documentation/modeToogle.md">Suivant</a>
+  <a href="readme.md">Précédent</a> | <a href="./modeToogle.md">Suivant</a>
 </p>
