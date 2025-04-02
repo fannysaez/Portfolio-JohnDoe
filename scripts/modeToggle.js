@@ -7,7 +7,7 @@ const modeToggleButton = document.getElementById('modeToggle');
 const currentMode = localStorage.getItem('mode');
 if (currentMode === 'dark') {
     document.body.classList.add('dark-mode');
-    modeToggleButton.textContent = "☀️ Mode Clair"; // Modifier le texte du bouton
+    modeToggleButton.textContent = "☀️"; // Modifier le texte du bouton
 }
 
 // Ajouter un événement de clic pour basculer le mode
@@ -16,9 +16,9 @@ modeToggleButton.addEventListener('click', () => {
     // Sauvegarder le mode dans le localStorage
     if (document.body.classList.contains('dark-mode')) {
         localStorage.setItem('mode', 'dark');
-        modeToggleButton.textContent = "☀️ Mode Clair"; // Modifier le texte du bouton
+        modeToggleButton.textContent = "☀️"; // Modifier le texte du bouton
     } else {
         localStorage.setItem('mode', 'light');
-        modeToggleButton.textContent = "🌙 Mode Sombre"; // Modifier le texte du bouton
+        modeToggleButton.textContent = "🌙"; // Modifier le texte du bouton
     }
 });
