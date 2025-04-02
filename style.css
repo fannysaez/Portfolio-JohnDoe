@@ -407,10 +407,11 @@ p {
 
 /* Texte "Chargement en cours" */
 #loading-text {
-  font-size: 20px;
+  font-size: 40px;
+  letter-spacing: 2px;
   font-weight: bold;
   color: rgb(250, 182, 93);
-  margin-bottom: 35px;
+  margin-bottom: 55px;
 }
 
 /* Loader plein écran */
@@ -449,10 +450,10 @@ p {
 
 /* Texte du pourcentage */
 #progress-text {
-  font-size: 50px;
+  font-size: 80px;
   font-weight: bold;
   color: rgb(250, 182, 93);
-  ;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
